@@ -1,0 +1,665 @@
+/* 字體大小 */
+html {
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.3rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.7rem;
+  }
+}
+
+.nav-item {
+  color: rgb(255 255 255 / 80%);
+  cursor: pointer;
+  text-align: center;
+}
+
+/* 電腦版CSS */
+@media (min-width: 768px) {
+  .navbar-logo {
+    padding: 10px !important;
+    width: 200px;
+    height: 100%;
+    /* transform: translateY(80%); */
+  }
+
+  .pcShow {
+    display: block;
+    position: relative;
+  }
+
+  .mobileShow {
+    display: none;
+  }
+
+  main {
+    overflow: hidden;
+    background-color: #000;
+    margin: 0 auto;
+  }
+
+  .fixedBG {
+    background-image: url("../images/bg_PC.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-darkGradient {
+    background-color: #000000b5;
+    height: 60px;
+    display: flex;
+  }
+
+  /* ViewModel Custom */
+  .vmc {
+    width: 100%;
+    height: 780px;
+  }
+
+  .dotHu {
+    content: url("../images/human.png");
+    display: block;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
+  .dot {
+    display: block;
+    width: 12px !important;
+    height: 12px !important;
+    border: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
+  .dim {
+    background: #fff;
+    border: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-size: 1vw !important;
+    font-weight: 700;
+    /* max-width: 128px !important; */
+    overflow-wrap: break-word;
+    padding: 0.3em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate3d(-50%, -50%, 0);
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.tooltipDiv {
+  position: absolute;
+  bottom: 16px;
+  text-align: left;
+  width: 20%;
+  margin: 0 10px;
+}
+
+.tipIcon {
+  cursor: pointer;
+  background-image: url("../images/icon/tips_icon.png");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  height: 2em;
+  width: 2em;
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 100%;
+  max-width: 260px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 100%;
+  margin: 10px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.showTip {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* 共通Viewer Model CSS */
+.vmc {
+  background-image: url("../images/bg_AR.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.fixed-img {
+  background-image: url("../images/bg_mobile.jpg");
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* 手機板CSS */
+@media (max-width: 768px) {
+  .pcShow {
+    display: none !important;
+  }
+
+  .mobileShow {
+    display: block;
+  }
+
+  .navbar-logo {
+    width: 110px;
+    height: 100%;
+    /* transform: translateY(80%); */
+  }
+
+  main {
+    overflow-x: hidden !important;
+    margin: 0 auto;
+  }
+
+  .fixedBG {}
+
+  .bg-darkGradient {
+    background-color: #000;
+    opacity: 0.8;
+    display: none;
+    height: 60px;
+  }
+
+  .vmc {
+    width: 100%;
+    height: 520px;
+  }
+
+  .dotHu {
+    content: url("../images/human.png");
+    display: block;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
+  .dot {
+    content: url("../images/human.png");
+    display: block;
+    width: 12px !important;
+    height: 12px !important;
+    border: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+
+  .dim {
+    background: #fff;
+    border: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-size: 12px !important;
+    width: 80px !important;
+    font-weight: 700;
+    max-width: 128px !important;
+    overflow-wrap: break-word;
+    padding: 0.3em 1em;
+    position: absolute;
+    /* width: max-content; */
+    height: max-content;
+    transform: translate3d(-50%, -50%, 0);
+    --min-hotspot-opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.bg-darkd {
+  background-color: #000;
+}
+
+.bg-darkd_2 {
+  background-color: #1d1d1d;
+}
+.bg-store {
+  background-color: #e5e5e5;
+}
+
+.dark_carousel{
+  background-color: #000 !important;
+}
+
+.contentCenter {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: -webkit-center;
+}
+
+/* 長度標籤 */
+#controls {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  max-width: unset;
+  transform: unset;
+}
+
+.show {
+  --min-hotspot-opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined)>* {
+  display: none;
+}
+
+/* Youtube */
+.youtube {
+  margin: 0 auto;
+  display: block;
+}
+
+.embedded-video-16-9 {
+  width: 85vw;
+  height: 50.625vw;
+  /* 90*9/16 */
+}
+
+@media (min-width: 768px) {
+  .embedded-video-16-9 {
+    width: 72vw;
+    height: 35.625vw;
+    /* width: 35vw; */
+    /* height: 20.3125vw; */
+    /* 45*9/16 */
+    padding-left: 5vw;
+    padding-right: 2vw;
+  }
+}
+
+/* Footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  border-top: solid 0.1em #ffffff59;
+}
+
+.text-muted {
+  color: #f0f0f0 !important;
+}
+
+/* nav */
+.navClass {
+  border-bottom: solid 0.1em #ffffff59;
+  background-color: #000 !important;
+  font-weight: bold;
+}
+
+/* Lazy Loading */
+#lazy-load-poster {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* background-image: url("../../assets/poster-damagedhelmet.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#button-load {
+  background-image: white;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 6% 50%;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 10px 18px 9px 40px;
+  font-weight: 500;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 100;
+}
+
+/* hero title 手機板 */
+@media (min-width: 768px) {
+  .hero_title {
+    font-size: 2.44444rem;
+    line-height: 1.18182;
+    text-shadow: none;
+  }
+
+  .hero__meta {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    width: 100%;
+  }
+}
+
+/* hero title 手機板 */
+@media (max-width: 768px) {
+  .hero_title {
+    font-size: 1.77778rem;
+    line-height: 1.25;
+    text-shadow: none;
+  }
+
+  .hero__meta {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+    width: 100%;
+  }
+}
+
+/* Icon設置 */
+.f-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 1rem;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 0rem;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.f-facebook-icon {
+  background: url("../images/icon/fb_icon.png") no-repeat center/contain;
+}
+
+.f-youtube-icon {
+  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
+}
+
+.f-twitter-icon {
+  background: url("../images/icon/twitter_icon.png") no-repeat center/contain;
+}
+
+.f-ig-icon {
+  background: url("../images/icon/ig_icon.png") no-repeat center/contain;
+}
+
+.f-line-icon {
+  background: url("../images/icon/line_icon.png") no-repeat center/contain;
+}
+
+/* Footer Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu--icon-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.toTopButtonMobile {
+  width: 100%;
+  background-color: #000;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #000;
+}
+
+.arrow {
+  background-image: url(https://www.britishmuseum.org/themes/custom/numiko/dist/img/icon-chevron-white.svg);
+  background-repeat: no-repeat;
+  background-position: center right 0px;
+  padding-right: 60px;
+}
+
+.ytp-chrome-top {
+  display: none !important;
+}
+
+.sharePageText {
+  height: 100%;
+  transform: translateY(35%);
+  color: #ffffffe0;
+  float: right;
+  font-size: 0.8em;
+}
+
+.shareIcon {
+  cursor: pointer;
+  width: 35px;
+  float: right;
+}
+
+#progress {
+  position: absolute;
+  width: calc(100% / 3);
+  height: 10px;
+  color: rgba(255, 255, 255, 0.952);
+  box-shadow: 0px 0px 8px 6px rgba(24, 24, 24, 0.534);
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  top: calc(50% - 5px);
+  left: calc(50% - 100% / 6);
+  opacity: 0;
+  transition: opacity 0.3s 0.3s;
+}
+
+#progress.show {
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+#progress>.bar {
+  width: 100%;
+  height: 100%;
+  background-color: #1d1d1d;
+  transform-origin: top left;
+  transform: scaleX(0);
+}
+
+/* ImageSetting */
+.cencen {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-item {
+  padding: 10px;
+  position: relative;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-inner img {
+  margin: auto;
+}
+
+/* 不顯示下標題 */
+.my-gallery figcaption {
+  display: none;
+}
+
+.pswp__caption__center {
+  font-size: 1rem;
+  line-height: 1.55556;
+  max-width: 800px;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+/* 輪播圖片 */
+@media (min-width: 1025px) {
+  .carousel {
+    width: 700px;
+  }
+}
+
+@media (man-width: 1025px) {
+  .carousel {
+    width: 100%;
+  }
+}
+
+.carousel {
+  height: 100%;
+}
+
+.carousel-inner {
+  /* make sure your .items will get correct height */
+  height: 100%;
+}
+
+.carousel-item {
+  background-size: contain;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 85%;
+  background-repeat: no-repeat;
+}
+
+.carousel-item img {
+  visibility: hidden;
+}
+
+.titleText_1,
+.titleText_2 {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+.footer_h2 {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.show>a,
+.navbar-default .navbar-nav>.show>a:focus,
+.navbar-default .navbar-nav>.show>a:hover {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+.nav-link {
+  color: rgb(255 255 255 / 90%) !important;
+
+}
+
+.nav-link:hover {
+  color: rgb(255 255 255 / 70%) !important;
+}
+
+/* actual dropdown animation */
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropdown .show {
+  max-height: 250px;
+  opacity: 1;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+}
+
+.legend_class {
+  display: block;
+  padding-bottom: .5em;
+}
+
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 30px;
+}
+.video-thumbnail:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  background: url('../images/play_button.png')  no-repeat;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  opacity: 0.75;
+}
+.video-thumbnail:hover:before {
+  opacity: 1;
+}

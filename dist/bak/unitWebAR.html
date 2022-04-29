@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>&lt;model-viewer&gt; example</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- The following libraries and polyfills are recommended to maximize browser support -->
+  <!-- NOTE: you must adjust the paths as appropriate for your project -->
+
+  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+  <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+</head>
+
+<body>
+  <model-viewer id="MVMVMV" camera-controls 
+  
+  src="https://modelviewer.dev/shared-assets/models/shishkebab.glb" 
+  ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" 
+  ar ar-modes="webxr scene-viewer quick-look" alt="A 3D model of a helmet" style="width: 90%;
+  height: 800px;">
+    <!-- 材質 Normal Occlusion Emission  -->
+    <div class="controls">
+      <div>
+        <p>Normals</p>
+        <select id="normals">
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_normal.jpg">Damaged helmet</option>
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Lantern/glTF/Lantern_normal.png">Lantern Pole</option>
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle_normal.png">Water Bottle</option>
+        </select>
+      </div>
+      <div>
+        <p>Occlusion</p>
+        <select id="occlusion">
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_AO.jpg">Damaged helmet</option>
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle_occlusionRoughnessMetallic.png">Water Bottle</option>
+        </select>
+      </div>
+      <div>
+        <p>Emission</p>
+        <select id="emission">
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF/Default_emissive.jpg">Damaged helmet</option>
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Lantern/glTF/Lantern_emissive.png">Lantern Pole</option>
+          <option value="https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle_emissive.png">Water Bottle</option>
+        </select>
+      </div>
+    </div>
+    <!-- 材質 Metalness Roughness-->
+    <div class="controls">
+      <div>
+        <p>Metalness: <span id="metalness-value"></span></p>
+        <input id="metalness" type="range" min="0" max="1" step="0.01" value="1">
+      </div>
+      <div>
+        <p>Roughness: <span id="roughness-value"></span></p>
+        <input id="roughness" type="range" min="0" max="1" step="0.01" value="0">
+      </div>
+    </div>
+    <!-- 顏色 -->
+    <div class="controls" id="color-controls">
+      <button data-color="1,0,0,1">Red</button>
+      <button data-color="0,1,0,1">Green</button>
+      <button data-color="0,0,1,1">Blue</button>
+    </div>
+      <br>
+      <!-- Light -->
+    <div class="controls">
+      <input type="text" id="A">
+      <button onclick="setData()">SetLight</button>
+    </div>
+    <!-- Env Light -->
+      <br>
+      <div class="controls">
+      <input type="text" id="B" value="https://i.imgur.com/IR4nF1m.jpeg">
+      <button onclick="setEnvUrl()">SetEnvImageUrl</button>
+    </div>
+  </model-viewer>
+  <script type="module">
+    const modelViewerTexture = document.querySelector("#MVMVMV");
+  
+  modelViewerTexture.addEventListener("load", () => {
+  
+    let material = modelViewerTexture.model.materials[0];
+  
+    let createAndApplyTexture = async (channel, event) => {
+      let texture = await modelViewerTexture.createTexture(event.target.value);
+      material[channel].setTexture(texture);
+    }
+  
+    document.querySelector('#normals').addEventListener('input', (event) => {
+      console.log("normalTexture")
+      console.log(event.target.value)
+      createAndApplyTexture('normalTexture', event);
+    });
+    
+    document.querySelector('#occlusion').addEventListener('input', (event) => {
+      createAndApplyTexture('occlusionTexture', event);
+    });
+    
+    document.querySelector('#emission').addEventListener('input', (event) => {
+      createAndApplyTexture('emissiveTexture', event);
+    });
+  });
+  
+  </script>
+
+  <script>
+    const modelViewerParameters = document.querySelector("#MVMVMV");
+
+    modelViewerParameters.addEventListener("load", (ev) => {
+
+      let material = modelViewerParameters.model.materials[0];
+
+      let metalnessDisplay = document.querySelector("#metalness-value");
+      let roughnessDisplay = document.querySelector("#roughness-value");
+
+      metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
+      roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
+
+      // Defaults to gold
+      material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
+
+      document.querySelector('#metalness').addEventListener('input', (event) => {
+        material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
+        metalnessDisplay.textContent = event.target.value;
+      });
+
+      document.querySelector('#roughness').addEventListener('input', (event) => {
+        material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
+        roughnessDisplay.textContent = event.target.value;
+      });
+    })
+  </script>
+
+  <script>
+    const modelViewerColor = document.querySelector("#MVMVMV");
+
+    document.querySelector('#color-controls').addEventListener('click', (event) => {
+      const colorString = event.target.dataset.color;
+
+      if (!colorString) {
+        return;
+      }
+
+      const color = colorString.split(',')
+        .map(numberString => parseFloat(numberString));
+
+      console.log('Changing color to: ', color);
+      const [material] = modelViewerColor.model.materials;
+      material.pbrMetallicRoughness.setBaseColorFactor(color);
+    });
+  </script>
+
+
+  <script>
+    function setData() {
+      let a = $("#A").val()
+      $("#MVMVMV").attr("exposure", a)
+    }
+  </script>
+  <script>
+    function setEnvUrl() {
+      let b = $("#B").val()
+      console.log(b)
+
+      $("#MVMVMV").attr("environment-Image", b)
+    }
+  </script>
+
+
+
+  <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+</body>
+
+</html>
+
+<style>
+  html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+  }
+
+  .controls {
+    width: 20%;
+  }
+</style>
