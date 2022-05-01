@@ -1,7 +1,7 @@
 /* 字體大小 */
 html {
   font-size: 1.1rem;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 @include media-breakpoint-up(sm) {
@@ -195,7 +195,8 @@ html {
     margin: 0 auto;
   }
 
-  .fixedBG {}
+  .fixedBG {
+  }
 
   .bg-darkGradient {
     background-color: #000;
@@ -262,7 +263,7 @@ html {
   background-color: #e5e5e5;
 }
 
-.dark_carousel{
+.dark_carousel {
   background-color: #000 !important;
 }
 
@@ -291,7 +292,7 @@ html {
 }
 
 /* This keeps child nodes hidden while the element loads */
-:not(:defined)>* {
+:not(:defined) > * {
   display: none;
 }
 
@@ -421,7 +422,8 @@ html {
 }
 
 .f-youtube-icon {
-  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat center/contain;
+  background: url(https://www.npm.gov.tw/images/icon/Social-yt.svg) no-repeat
+    center/contain;
 }
 
 .f-twitter-icon {
@@ -507,7 +509,7 @@ html {
   opacity: 1;
 }
 
-#progress>.bar {
+#progress > .bar {
   width: 100%;
   height: 100%;
   background-color: #1d1d1d;
@@ -597,16 +599,15 @@ html {
   font-weight: bold;
 }
 
-.navbar-default .navbar-nav>.show>a,
-.navbar-default .navbar-nav>.show>a:focus,
-.navbar-default .navbar-nav>.show>a:hover {
+.navbar-default .navbar-nav > .show > a,
+.navbar-default .navbar-nav > .show > a:focus,
+.navbar-default .navbar-nav > .show > a:hover {
   color: #555;
   background-color: #e7e7e7;
 }
 
 .nav-link {
   color: rgb(255 255 255 / 90%) !important;
-
 }
 
 .nav-link:hover {
@@ -632,13 +633,13 @@ html {
 .dropdown .show {
   max-height: 250px;
   opacity: 1;
-  padding: .5rem 0;
-  margin: .125rem 0 0;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
 }
 
 .legend_class {
   display: block;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 .video-thumbnail {
@@ -653,7 +654,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  background: url('../images/play_button.png')  no-repeat;
+  background: url("../images/play_button.png") no-repeat;
   content: "";
   width: 50px;
   height: 50px;
@@ -662,4 +663,14 @@ html {
 }
 .video-thumbnail:hover:before {
   opacity: 1;
+}
+
+.imgTitleText {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff !important;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }

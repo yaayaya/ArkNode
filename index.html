@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>《珠洲クジラ伝説遺跡》</title>
+  <title>方舟博物館</title>
   <link rel="icon" type="image/x-icon" sizes="64x64" href="./images/icon/web_title_icon.svg">
   <!-- Apple/Safari icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./images/icon/web_title_icon.png">
@@ -18,7 +18,7 @@
   <meta name="msapplication-square150x150logo" content="./images/icon/web_title_icon.png">
   <meta name="msapplication-square310x310logo" content="./images/icon/web_title_icon.png">
 
-  <meta property="og:title" content="方舟博物館《珠洲クジラ伝説遺跡》" />
+  <meta property="og:title" content="方舟博物館" />
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.thearkmuseum.com/">
   <meta property="og:image" content="http://i.imgur.com/ocb3W2m.jpeg" />
@@ -26,7 +26,7 @@
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="方舟博物館《珠洲クジラ伝説遺跡》" />
+  <meta property="og:site_name" content="方舟博物館" />
 
   <link rel="shortcut icon" href="./images/icon/web_title_icon.ico">
 
@@ -113,7 +113,8 @@
 
 
           <div class="w-100 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7" onclick="showNavBar()">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7"
+              onclick="showNavBar()">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
@@ -144,6 +145,16 @@
               onclick="ToScroll('Ruins_id')"></a>
             <a v-show="currentPN == 'whale'" class="nav-item nav-link mx-2" data-i18n="Title.Whale"
               onclick="ToScroll('Whale_id')"></a>
+
+            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.giant"
+              onclick="ToScroll('giant_id')"></a>
+            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.biological"
+              onclick="ToScroll('biological_id')"></a>
+            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.plant"
+              onclick="ToScroll('plant_id')"></a>
+            <a v-show="currentPN == 'collection'" class="nav-item nav-link mx-2" data-i18n="Title.BuNam"
+              onclick="ToScroll('BuNam_id')"></a>
+
             <!-- <a class="nav-item nav-link mx-2" data-i18n="Title.OtherRuins" onclick="ToScroll('OtherRuins_id')"></a> -->
           </div>
         </div>
@@ -407,7 +418,7 @@
         scrollTop: $(`#${id}`).offset().top - 300
       }, 800);
     }
-    
+
   }
 
   // Navbar
@@ -445,43 +456,7 @@
 
 </script>
 
-<script>
-  new Vue({
-    el: "#vueNav",
-    data: {
-      BTName: "",
-      // whale , giant , plant , BuNam , collection
-      currentPN: "",
-      BTitle : "",
 
-    },
-    methods: {
-      changePage(e) {
-        this.currentPN = e
-        this.BTitle = "BTitle." + e
-        console.log(this.BTitle)
-        reloadPage(e)
-        console.log("changePage")
-
-        window.history.replaceState(null, null, `?page=${e}`);
-
-      }
-    },
-    mounted() {
-      pageName = new URL(location.href).searchParams.get("page")
-      console.log("mounted " + pageName)
-      if (pageName === null || pageName == "undefined") {
-        window.history.replaceState(null, null, "?page=whale");
-        this.changePage("whale")
-      }
-      else {
-        this.changePage(pageName)
-      }
-    }
-  })
-
-
-</script>
 
 
 <script>
@@ -506,51 +481,16 @@
     jqueryI18next.init(i18next, $);
     $('#i18next').localize();
     updateWebTitle()
-    changeImgLang(i18next.language)
+    // changeImgLang(i18next.language)
   });
 
   function langChange(lang) {
     i18next.changeLanguage(lang)
     $('#i18next').localize();
     $('.navbar-collapse').collapse('hide')
+    lng = lang
     updateWebTitle()
-    changeImgLang(i18next.language)
-  }
-
-  function changeImgLang(lang) {
-    let en01 = '1498x3917'
-    let en02 = '1498x5462'
-    let jp01 = '1498x3122'
-    let jp02 = '1498x4415'
-    let zhtw01 = '1498x2300'
-    let zhtw02 = '1498x3394'
-
-    $("#OtherImageDesktop_1").attr('src', `./images/Others/${lang}/desktop.jpg`)
-    $("#OtherImageMobile_a1").attr('href', `./images/Others/${lang}/mobile1.jpg`)
-    $("#OtherImageMobile_1").attr('src', `./images/Others/${lang}/mobile1.jpg`)
-    $("#OtherImageMobile_a2").attr('href', `./images/Others/${lang}/mobile2.jpg`)
-    $("#OtherImageMobile_2").attr('src', `./images/Others/${lang}/mobile2.jpg`)
-    $("#OtherImageMobile_a3").attr('href', `./images/Others/${lang}/mobile3.jpg`)
-    $("#OtherImageMobile_3").attr('src', `./images/Others/${lang}/mobile3.jpg`)
-    $("#OtherImageMobile_a4").attr('href', `./images/Others/${lang}/mobile4.jpg`)
-    $("#OtherImageMobile_4").attr('src', `./images/Others/${lang}/mobile4.jpg`)
-
-    if (lang == 'jp') {
-      $("#OtherImageMobile_a1").attr('data-size', jp01)
-      $("#OtherImageMobile_a2").attr('data-size', jp01)
-      $("#OtherImageMobile_a3").attr('data-size', jp02)
-      $("#OtherImageMobile_a4").attr('data-size', jp02)
-    } else if (lang == 'zhtw') {
-      $("#OtherImageMobile_a1").attr('data-size', zhtw01)
-      $("#OtherImageMobile_a2").attr('data-size', zhtw01)
-      $("#OtherImageMobile_a3").attr('data-size', zhtw02)
-      $("#OtherImageMobile_a4").attr('data-size', zhtw02)
-    } else if (lang == 'en') {
-      $("#OtherImageMobile_a1").attr('data-size', en01)
-      $("#OtherImageMobile_a2").attr('data-size', en01)
-      $("#OtherImageMobile_a3").attr('data-size', en02)
-      $("#OtherImageMobile_a4").attr('data-size', en02)
-    }
+    // changeImgLang(i18next.language)
   }
 
   function updateWebTitle() {
@@ -559,13 +499,50 @@
     $('title').text(webTitle)
   }
 
-  function showNavBar(){
+  function showNavBar() {
     $("#myNavbar7").collapse()
   }
 
 
 </script>
 
+<script>
+  new Vue({
+    el: "#vueNav",
+    data: {
+      BTName: "",
+      // whale , giant , plant , BuNam , collection
+      currentPN: "",
+      BTitle: "",
 
+    },
+    methods: {
+      changePage(e) {
+        this.currentPN = e
+        this.BTitle = "BTitle." + e
+        console.log(this.BTitle)
+        console.log(lng)
+        reloadPage(e)
+        console.log("changePage")
+
+        window.history.replaceState(null, null, `?page=${e}`);
+
+      }
+    },
+    mounted() {
+      pageName = new URL(location.href).searchParams.get("page")
+      console.log("mounted " + pageName)
+      if (pageName === null || pageName == "undefined") {
+        window.history.replaceState(null, null, "?page=whale");
+        this.changePage("whale")
+      }
+      else {
+        this.changePage(pageName)
+      }
+    }
+  })
+
+
+</script>
 
 </html>
