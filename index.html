@@ -360,6 +360,8 @@
 <script type="text/javascript" src="./plugin/lang/jp.js"></script>
 <script type="text/javascript" src="./plugin/lang/en.js"></script>
 
+
+
 <script>
   let hideTime = 0;
   var isMobile = /iPhone|iPad|iPod|Android|iPadPro/i.test(navigator.userAgent);
@@ -403,7 +405,6 @@
     } else {
       $("#dimension-demo").attr("camera-orbit", "90deg 0deg 90%")
     }
-
   }
 
   // Scroll
@@ -446,6 +447,11 @@
 
   // 重新加載網頁內容
   function reloadPage(e) {
+    if (lng == "jp" && e != "whale"){
+      lng = "en"
+    }
+    console.log("e " + e)
+    console.log("lang " + lng)
     $.get(`./${e}.html`, function (data, status) {
       $("#main").empty()
       $("#main").html(data)

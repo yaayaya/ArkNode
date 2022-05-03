@@ -20,7 +20,7 @@ let zhtw = {
       giant: "巨人巨獸化石",
       biological: "生物化石",
       plant: "植物化石",
-      BuNam: "卜湳文明遺跡遺跡文物",
+      BuNam: "卜湳文明遺跡文物",
     },
     Lang: {
       Title: "語言",
@@ -128,12 +128,12 @@ let zhtw = {
     // 泰國甲米
     Thailand_1: {
       Title: "「巨人巨蛇神話遺跡」在泰國甲米",
-      t1: "這個遺址在泰國甲米<hao Khanap Nam的鐘乳石洞中，發現了一個巨大似人的骨骼化石與巨大的蛇骨化石相互糾纏的状態，疑是死亡前有打鬥的跡象。這個似人的骨骼化石身長約6.5公尺，巨蛇約12公尺長。",
-      t2: "人形頭骨完整有獠牙，巨蛇頭上中間有一斷角·巨蛇咬住人形骨骸的左手，人形的骨骸右手抓住巨蛇，巨蛇身體纏繞人形骨骸身體3圈。",
-      t3: "當地新聞也訪談了國際考古團隊負責人Felix Blume先生·以及30多年前曾參與美國道格拉斯安德森(Douglas Anderson)博士一起在甲米進行發掘工作的當地學者尼沃(Niwat Wathanayomnaporn)先生，瞭解關於這個遺跡的挖掘過程，以及這個遺跡和甲米府的神話傳說之間的關係。",
-      t4: "這古老傳說，是關於巨人和巨蛇為了爭奪一位漂亮的公主的致命打鬥·最後雙雙死亡，各變成大小甲米峰的傳說·這個遺址目前仍被保留在Khao Khanap Nam的鐘乳石洞中展示·這個發現可說是泰國近年來最重大的考古發現，該遺址是否直接證實古文明神話的巨人真實存在，不再只是傳說，值得後續的研究與確認。",
-      t5: "",
-      t6: "",
+      t1: "這個遺址在泰國甲米Khao Khanap Nam的鐘乳石洞中，發現了一個巨大似人的骨骼化石與巨大的蛇骨化石相互糾纏的狀態，疑是死亡前有打鬥的跡象。這個似人的骨骼化石身長約6.5公尺，巨蛇約12公尺長。人形頭骨完整有獠牙，巨蛇頭上中間有一斷角，巨蛇咬住人形骨骸的左手，人形的骨骸右手抓住巨蛇，巨蛇身體纏繞人形骨骸身體3圈。",
+      t2: "這遺跡的發現可說是泰國近年來最重大的考古發現，該遺址是否直接證實古文明神話的巨人真實存在，不再只是傳說，值得關注。",
+      t3: "目前這個遺跡是由法國考古學家、台灣、蘇格蘭所組成的國際考古團隊進駐挖掘，2017年11月15日發掘出來，於2018年11月2日遺址正式對外公開。",
+      t4: "",
+      t5: "當地新聞也訪談了國際考古團隊負責人Felix Blume先生·以及30多年前曾參與美國道格拉斯安德森(Douglas Anderson)博士一起在甲米進行發掘工作的當地學者尼沃(Niwat Wathanayomnaporn)先生，瞭解關於這個遺跡的挖掘過程，以及這個遺跡和甲米府的神話傳說之間的關係。",
+      t6: "這古老傳說，是關於巨人和巨蛇為了爭奪一位漂亮的公主的致命打鬥·最後雙雙死亡，各變成大小甲米峰的傳說·這個遺址目前仍被保留在Khao Khanap Nam的鐘乳石洞中展示·這個發現可說是泰國近年來最重大的考古發現，該遺址是否直接證實古文明神話的巨人真實存在，不再只是傳說，值得後續的研究與確認。",
     },
     Thailand_2: {
       Title: "「巨人與巨獸遺跡—義村遺址」",
@@ -197,15 +197,15 @@ let zhtw = {
 
       imgTitle_1: "巨人斯金納1號 Skinner No.1",
       imgDescription_1_1: "2020 巨人斯金納1號 Skinner No.1",
-      imgDescription_1_2: "342x156xH238",
+      imgDescription_1_2: "(342x156xH238 cm)",
 
       imgTitle_2: "巨獸-鯊鹿兒",
       imgDescription_2_1: "2020 遺跡化石 - 巨獸-鯊鹿兒",
-      imgDescription_2_2: "342x156xH200",
+      imgDescription_2_2: "(342x156xH200 cm)",
 
       imgTitle_3: "巨獸鳥化石1號",
       imgDescription_3_1: "2020 遺跡化石 - 巨獸鳥化石1號",
-      imgDescription_3_2: "102x60x60",
+      imgDescription_3_2: "(102x60x60 cm)",
 
       imgTitle_4: "",
       imgDescription_4_1: "",
@@ -213,137 +213,141 @@ let zhtw = {
 
       imgTitle_6: "鯨魚1號 (Whale Monster 01)",
       imgDescription_6_1: "2021 遺跡化石 - 鯨魚1號 (Whale Monster 01)",
-      imgDescription_6_2: "1140x320x55(1824)	",
+      imgDescription_6_2: "(1140x320x55 cm)(1824)	",
     },
     Collection_2: {
       Title: "生物化石　　　　　　　　　　　　",
 
       imgTitle_7: "MB 02局部01",
       imgDescription_7_1: "2019 遺跡化石Trace Fossil-MB 02局部01",
-      imgDescription_7_2: "455x150x15(341)",
+      imgDescription_7_2: "(455x150x15 cm)(341)",
 
       imgTitle_8: "MB 04",
       imgDescription_8_1: "2019 遺跡化石Trace Fossil-MB 04",
-      imgDescription_8_2: "200x103x14(103)",
+      imgDescription_8_2: "(200x103x14 cm)(103)",
 
       imgTitle_9: "MB 03",
       imgDescription_9_1: "2019 遺跡化石Trace Fossil-MB 03",
-      imgDescription_9_2: "182x103x12(93)",
+      imgDescription_9_2: "(182x103x12 cm)(93)",
 
       imgTitle_10: "MB 13",
       imgDescription_10_1: "2020 遺跡化石Trace Fossil-MB 13",
-      imgDescription_10_2: "184x103x9(95)",
+      imgDescription_10_2: "(184x103x9 cm)(95)",
 
       imgTitle_11: "MB 16",
       imgDescription_11_1: "2020 遺跡化石Trace Fossil-MB 16",
-      imgDescription_11_2: "296x138x14(204)",
+      imgDescription_11_2: "(296x138x14 cm)(204)",
 
       imgTitle_12: "MB 14",
       imgDescription_12_1: "2020 遺跡化石Trace Fossil-MB 14",
-      imgDescription_12_2: "140x60x10(42)",
+      imgDescription_12_2: "(140x60x10 cm)(42)",
 
       imgTitle_13: "MB 08",
       imgDescription_13_1: "2020 遺跡化石Trace Fossil-MB 08",
-      imgDescription_13_2: "74x52x10(19)",
+      imgDescription_13_2: "(74x52x10 cm)(19)",
 
       imgTitle_14: "MB 06",
       imgDescription_14_1: "2020 遺跡化石Trace Fossil-MB 06",
-      imgDescription_14_2: "60×38×10(11.4)",
+      imgDescription_14_2: "(60×38×10 cm)(11.4)",
 
       imgTitle_15: "MB 07",
       imgDescription_15_1: "2020 遺跡化石Trace Fossil-MB 07",
-      imgDescription_15_2: "53×42.5×5(11.2)",
+      imgDescription_15_2: "(53×42.5×5 cm)(11.2)",
 
       imgTitle_16: "MB 09",
       imgDescription_16_1: "2020 遺跡化石Trace Fossil-MB 09",
-      imgDescription_16_2: "62x53x5.5(16.4)",
+      imgDescription_16_2: "(62x53x5.5 cm)(16.4)",
 
       imgTitle_17: "MB 10",
       imgDescription_17_1: "2020 遺跡化石Trace Fossil-MB 10",
-      imgDescription_17_2: "50x60.5x4(15)",
+      imgDescription_17_2: "(50x60.5x4 cm)(15)",
 
       imgTitle_18: "MB 11",
       imgDescription_18_1: "2020 遺跡化石Trace Fossil-MB 11",
-      imgDescription_18_2: "87x42.5x8(18.5)",
+      imgDescription_18_2: "(87x42.5x8 cm)(18.5)",
 
       imgTitle_19: "MB 15",
       imgDescription_19_1: "2022 遺跡化石Trace Fossil-MB 15",
-      imgDescription_19_2: "57x71x25(20)",
+      imgDescription_19_2: "(57x71x25 cm)(20)",
 
       imgTitle_20: "MB 12",
       imgDescription_20_1: "2020 遺跡化石Trace Fossil-MB 12",
-      imgDescription_20_2: "98x89x4(43.6)",
+      imgDescription_20_2: "(98x89x4 cm)(43.6)",
 
       imgTitle_37: "MB 17",
       imgDescription_37_1: "2020 遺跡化石Trace Fossil-MB 17",
-      imgDescription_37_2: "40x27x8(5.4)	",
+      imgDescription_37_2: "(40x27x8 cm)(5.4)	",
     },
     Collection_3: {
       Title: "植物化石　　　　　　　　　　　　",
 
       imgTitle_21: "PM 01",
       imgDescription_21_1: "2020 遺跡化石Trace Fossil-PM 01",
-      imgDescription_21_2: "310x111x6(172)",
+      imgDescription_21_2: "(310x111x6 cm)(172)",
 
       imgTitle_22: "PM 19",
       imgDescription_22_1: "2020 遺跡化石Trace Fossil-PM 19",
-      imgDescription_22_2: "159x120x6.5(95)",
+      imgDescription_22_2: "(159x120x6.5cm)(95)",
 
       imgTitle_23: "PM 18",
       imgDescription_23_1: "2020 遺跡化石Trace Fossil-PM 18",
-      imgDescription_23_2: "169x83x9(70)",
+      imgDescription_23_2: "(169x83x9 cm)(70)",
 
       imgTitle_24: "PM 16",
       imgDescription_24_1: "2020 遺跡化石Trace Fossil-PM 16",
-      imgDescription_24_2: "160x50x7(40)",
+      imgDescription_24_2: "(160x50x7 cm)(40)",
 
       imgTitle_25: "PM 05",
       imgDescription_25_1: "2022 遺跡化石Trace Fossil-PM 05",
-      imgDescription_25_2: "152x60x6(45.6)",
+      imgDescription_25_2: "(152x60x6 cm)(45.6)",
 
       imgTitle_26: "PM 07",
       imgDescription_26_1: "2022 遺跡化石Trace Fossil-PM 07",
-      imgDescription_26_2: "80x39x4(15.6)",
+      imgDescription_26_2: "(80x39x4 cm)(15.6)",
 
       imgTitle_27: "PM 06",
       imgDescription_27_1: "2022 遺跡化石Trace Fossil-PM 06",
-      imgDescription_27_2: "142x36x3(25.5)",
+      imgDescription_27_2: "(142x36x3 cm)(25.5)",
 
       imgTitle_28: "PM 21",
       imgDescription_28_1: "2020 遺跡化石Trace Fossil-PM 21",
-      imgDescription_28_2: "61×28×4(8.5)",
+      imgDescription_28_2: "(61×28×4 cm)(8.5)",
 
       imgTitle_29: "PM 22",
       imgDescription_29_1: "2020 遺跡化石Trace Fossil- PM 22",
-      imgDescription_29_2: "40x52x6(10.4)",
+      imgDescription_29_2: "(40x52x6 cm)(10.4)",
 
       imgTitle_30: "PM 23",
       imgDescription_30_1: "2020 遺跡化石Trace Fossil-PM 23",
-      imgDescription_30_2: "42x29x5(6)",
+      imgDescription_30_2: "(42x29x5 cm)(6)",
 
       imgTitle_31: "PM 25",
       imgDescription_31_1: "2020 遺跡化石Trace Fossil-PM 25",
-      imgDescription_31_2: "47x30x6(7)",
+      imgDescription_31_2: "(47x30x6 cm)(7)",
 
       imgTitle_32: "PM 26",
       imgDescription_32_1: "2020 遺跡化石Trace Fossil-PM 26",
-      imgDescription_32_2: "30x51x5.5(7.65)",
+      imgDescription_32_2: "(30x51x5.5 cm)(7.65)",
 
       imgTitle_33: "PM 27",
       imgDescription_33_1: "2020 遺跡化石Trace Fossil-PM 27",
-      imgDescription_33_2: "49x40x4(9.8)	",
+      imgDescription_33_2: "(49x40x4 cm)(9.8)	",
 
       imgTitle_34: "PM 28",
       imgDescription_34_1: "2020 遺跡化石Trace Fossil-PM 28",
-      imgDescription_34_2: "40x30x4(6)",
+      imgDescription_34_2: "(40x30x4 cm)(6)",
 
       imgTitle_35: "PM 29",
       imgDescription_35_1: "2022 遺跡化石Trace Fossil-PM 29",
-      imgDescription_35_2: "24.5x32x2(3.9)",
+      imgDescription_35_2: "(24.5x32x2 cm)(3.9)",
 
       imgTitle_36: "PM 30",
       imgDescription_36_1: "2022 遺跡化石Trace Fossil-PM 30",
-      imgDescription_36_2: "21x17x2(1.8)",
+      imgDescription_36_2: "(21x17x2 cm)(1.8)",
+    },
+
+    Collection_4: {
+      Title: "卜湳文明遺跡文物　　　　　　　　　　",
 
     },
   },

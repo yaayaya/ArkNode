@@ -1,6 +1,12 @@
 let jp = {
   translation: {
-
+    BTitle: {
+      whale: "Whale Legends",
+      giant: "Giant Site",
+      plant: "Dayan Site",
+      BuNam: "Bu-Nam Site",
+      collection: "Collection",
+    },
     Title: {
       News: "ニュース",
       RuinsInfo: "遺跡の情報",
