@@ -42,6 +42,7 @@ let jp = {
     loadingText: "Loading 3D Model",
     ExhibitionInfo: {
       Title: "《珠洲クジラ伝説遺跡》",
+      SubTitle:"",
       TodayOpen: "本日オープン 09:00 - 17:30",
       WeeksOpenFull: "オープン時間　每日 9:00-17:30",
       OpeningTitle: "オープン時間",

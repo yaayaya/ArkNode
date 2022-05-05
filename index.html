@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>方舟博物館</title>
+  <title>《方舟博物館》</title>
   <link rel="icon" type="image/x-icon" sizes="64x64" href="./images/icon/web_title_icon.svg">
   <!-- Apple/Safari icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./images/icon/web_title_icon.png">
@@ -18,7 +18,7 @@
   <meta name="msapplication-square150x150logo" content="./images/icon/web_title_icon.png">
   <meta name="msapplication-square310x310logo" content="./images/icon/web_title_icon.png">
 
-  <meta property="og:title" content="方舟博物館" />
+  <meta property="og:title" content="《方舟博物館》" />
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.thearkmuseum.com/">
   <meta property="og:image" content="http://i.imgur.com/ocb3W2m.jpeg" />
@@ -26,7 +26,7 @@
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="方舟博物館" />
+  <meta property="og:site_name" content="《方舟博物館》" />
 
   <link rel="shortcut icon" href="./images/icon/web_title_icon.ico">
 
@@ -84,9 +84,8 @@
 <div id="i18next">
 
   <body id="body_id">
+    <div class="fixedBG_mobile"></div>
     <div>
-      <div class="fixed-img"></div>
-
       <!-- 導覽列 -->
       <nav class="navbar navbar-expand-lg navbar-dark  navClass bg-darkd" id="vueNav">
         <div class="d-flex flex-grow-1">
@@ -450,8 +449,6 @@
     if (lng == "jp" && e != "whale"){
       lng = "en"
     }
-    console.log("e " + e)
-    console.log("lang " + lng)
     $.get(`./${e}.html`, function (data, status) {
       $("#main").empty()
       $("#main").html(data)
@@ -486,7 +483,7 @@
   }, function (err, t) {
     jqueryI18next.init(i18next, $);
     $('#i18next').localize();
-    updateWebTitle()
+    // updateWebTitle()
     // changeImgLang(i18next.language)
   });
 
@@ -495,7 +492,7 @@
     $('#i18next').localize();
     $('.navbar-collapse').collapse('hide')
     lng = lang
-    updateWebTitle()
+    // updateWebTitle()
     // changeImgLang(i18next.language)
   }
 
@@ -526,18 +523,24 @@
       changePage(e) {
         this.currentPN = e
         this.BTitle = "BTitle." + e
-        console.log(this.BTitle)
-        console.log(lng)
         reloadPage(e)
-        console.log("changePage")
 
         window.history.replaceState(null, null, `?page=${e}`);
 
+
+        if (e == "whale"){
+          $('.fixedBG_mobile').css('background-image', `url(../images/Background/${e}_bg_mobile.jpg`);
+        }
+        else if (e == "BuNam"){
+          $('.fixedBG_mobile').css('background-image', `url(../images/Background/${e}_bg_mobile.png`);
+        }
+        else if (e == "collection"){
+          $('.fixedBG_mobile').css('background-image', `url(../images/Background/${e}_bg_mobile.png`);
+        }
       }
     },
     mounted() {
       pageName = new URL(location.href).searchParams.get("page")
-      console.log("mounted " + pageName)
       if (pageName === null || pageName == "undefined") {
         window.history.replaceState(null, null, "?page=whale");
         this.changePage("whale")

@@ -16,6 +16,11 @@ let en = {
       Whale: "Whale Legends",
       OtherRuins: "Other Sites",
       Store: "Welcome to The Ark Museum Shop",
+
+      giant: "Giant beast Fossil",
+      biological: "Biological Fossil",
+      plant: "Plant Fossil",
+      BuNam: "Bu-Nam cultural Relics",
     },
     Lang: {
       Title: "Language",
@@ -41,7 +46,8 @@ let en = {
     },
     loadingText: "Loading 3D Model",
     ExhibitionInfo: {
-      Title: "《Archaeological Site of the Whale Legend in Suzu》",
+      Title: "《Archaeological Site of the Whale Legend》",
+      SubTitle:"in Suzu, Japan",
       TodayOpen: "Open today 09:00 - 17:30",
       WeeksOpenFull: "Opening time 9:00-17:30　Open Everyday",
       OpeningTitle: "Opening time",
@@ -123,7 +129,8 @@ let en = {
     License: "© 2021 Tu's Archeology Team All Rights Reserved",
     // 泰國甲米
     Thailand_1: {
-      Title: "‘Giant Ruins’ in Krabi, Thailand",
+      Title: "'Giant Ruins'",
+      SubTitle:"in Krabi, Thailand",
       t1: "Located in a stalactite cave in Khao Khanap Nam, Krabi Province of Thailand, the site has identified the skeleton fossils of a giant man-like figure and a giant snake entangled with each other, implicating a fight taking place before their death. This skeleton fossil of the man-like figure measures about 6.5 metres long and the snake about 12 metres long. The man-like skull completes with a set of fangs while the giant snakehead has a broken horn at its centre. Based on the position of the skeletons, the snake bites on the left arm of the man-like figure, and it grabs the snake with the right hand. The giant snake wraps around the giant figure in three circles.",
       t2: "The relics are arguably the most significant archaeological discovery in Thailand in recent years. Its potential to prove the existence of the giants of ancient civilisations and to confirm the myths as historical events is worthy of attention. An international team composed of French, Taiwanese and Scottish archaeologists has been stationed there for further investigation. The site surfaced on November 15, 2017, and was unveiled to the public on November 2, 2018. So to learn about the excavation process as well as the connection between the ruins and the myths and legends of Krabi Province, the local news interviewed Mr Félix Blume, the head of the archaeological team, and Mr Niwat Wathanayomnaporn, a local scholar who had worked with the American Dr Douglas Anderson in the excavation work in Krabi more than 30 years back.",
       t3: "",
@@ -141,7 +148,8 @@ let en = {
       t6: "",
     },
     Plant_1: {
-      Title: "Dayan Ruins of Taoyuan,Taiwan",
+      Title: "Dayan Ruins",
+      SubTitle:"of Taoyuan,Taiwan",
       t1: "This remains is located in Dayan Forest Park,Taoyuan,Taiwan.Plant fossils about 10 meters long and 3.3 meterswide were discovered.There are two huge tree trunks,densefoliage,and many different fruits.The names of the plantspecies are still there.researching.",
       t2: "At the bottom right,thereis a huge bird-like bird fossil of about 2 meters,and morethan one hundred kinds of plant fossil relics have been excavated,showing that there should be a rich flora and fauna atthat time.",
       t3: "This relic is the largest and most complete plantfossil group discovered in Taiwan.It has been preserved onsite and has become a tourist site of the Dayan Forest ParkVisitor Center.It attracts many tourists and is also a valuableteaching material for the best environmental and ecologicaleducation.",
@@ -151,6 +159,7 @@ let en = {
     },
     BuNam_1: {
       Title: "Relics of Bu-Nam Civilisation-Dachi Site",
+      SubTitle:"of Tainan,Taiwan",
       t1: "From 2001 to 2003,'Relics of Bu-Nam Civilisation-DachiSite'uncovered the relic of an underground cellar and atomb site,located on the Tainan University of the Artscampus in Daqi Village,Guantian Township in Tainan County.After conducting a small-scale dig of eight test units,partialremains of the semi-stone-wall structure appeared.Such aclue led to the disclosure of the full-scaled tomb.",
       t2: "The tombwas a stone chamber structure 900 cm long from north tosouth and 450 cm wide from east to west,with all four sidescovered with bas-reliefs,despite eighty per cent of the westwall collapsed.In addition,there used to be a roof shapedlike a reversed funnel,but all of which have collapsed.Placedin the centre was a stone coffin 198 cm long,105 cm wideand 50 cm high.The first phase of excavation revealed manystone reliefs,statues and pottery figurines in the stonechamber.",
       t3: "Later,cultural relics such as the 'Twelve SacredBeasts','Grate of Fleeing Souls'and 'Stone Towerfollowed one after another.During the 2001 and 2003 exhibi-tions,the unearthed relics caused a stir,arousing greatattention.",
@@ -159,7 +168,8 @@ let en = {
       t6: "",
     },
     BuNam_2: {
-      Title: "'Bu-Num Civilisation Wheel Site' at Goodwood House,England",
+      Title: "'Bu-Num Civilisation Wheel Site'",
+      SubTitle:"at Goodwood House,England",
       t1: "In 2016,the 'Bu-Num Civilisation Wheel Site',cover-ing 26 acres of land,surfaced at the Goodwood House inWest Sussex,England,a sculpture park of the Cass SculptureFoundation founded by Wilfred and Jeannette Cass 22 yearsago.Consists of five four-metre square pits and up to twometres in depth,the 'Bu-Num Civilisation Wheel Siteuncovers two large discs and 25 other scattered unidentifiedmetal materials.",
       t2: "These mysterious giant metal blocks ofvarious shapes were relatively complete and seemed com-patible with one another.Plenty of them had matching con-tours with mysterious reliefs and text marks on them.",
       t3: "A fewspots came across as rusty,scrappy and damaged,with acopper green surface mixed with local chalk soil,showing anattractive metal composition and colour.Who made this?How and why?What could be the complete structure andfunction after the assemblage?What are these mysteriousreliefs revealing?We await scholars involved for furtherexamination and inspection.",
