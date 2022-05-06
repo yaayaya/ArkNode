@@ -92,28 +92,26 @@
 
           <img src="./images/icon/logo.jpg" class="navbar-logo" style="padding-bottom: 0px;height: 100%;">
 
-          <!-- 大標 -->
-          <div class="collapse navbar-collapse flex-grow-1 text-right" style="display: block;">
-            <div class="navbar-nav ml-auto flex-nowrap ">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false" :data-i18n="BTitle">
-                </a>
-                <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
-                  <a class="nav-item nav-link" data-i18n="BTitle.whale" @click="changePage('whale')"></a>
-                  <a class="nav-item nav-link" data-i18n="BTitle.giant" @click="changePage('giant')"></a>
-                  <a class="nav-item nav-link" data-i18n="BTitle.plant" @click="changePage('plant')"></a>
-                  <a class="nav-item nav-link" data-i18n="BTitle.BuNam" @click="changePage('BuNam')"></a>
-                  <a class="nav-item nav-link" data-i18n="BTitle.collection" @click="changePage('collection')"></a>
-                </div>
-              </li>
+          <div class="w-100" style="display: flex; align-items: center;">
+            <!-- 大標 -->
+            <div class="collapse navbar-collapse flex-grow-1 " style="display: inline-block;">
+              <div class="navbar-nav  flex-nowrap ">
+                <li class="nav-item dropdown dropdownBTitle" style="text-align:left; padding-left: 1.2rem;">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" :data-i18n="BTitle">
+                  </a>
+                  <div class="dropdown-menu BTitle-dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.whale" @click="changePage('whale')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.giant" @click="changePage('giant')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.plant" @click="changePage('plant')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.BuNam" @click="changePage('BuNam')"></a>
+                    <a class="nav-item-BTitle nav-link hover-underline-animation" data-i18n="BTitle.collection" @click="changePage('collection')"></a>
+                  </div>
+                </li>
+              </div>
             </div>
-          </div>
-
-
-          <div class="w-100 text-right">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7"
-              onclick="showNavBar()">
+              onclick="showNavBar()" style="float: right;">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
@@ -128,10 +126,10 @@
                 aria-haspopup="true" aria-expanded="false" data-i18n="Lang.Title">
               </a>
               <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="background-color: #1d1d1d;">
-                <a v-show="currentPN == 'whale' " class="nav-item nav-link" data-i18n="Lang.jp"
+                <a v-show="currentPN == 'whale' " class="nav-item nav-link hover-underline-animation" data-i18n="Lang.jp"
                   onclick="langChange('jp')"></a>
-                <a class="nav-item nav-link" data-i18n="Lang.zhtw" onclick="langChange('zhtw')"></a>
-                <a class="nav-item nav-link" data-i18n="Lang.en" onclick="langChange('en')"></a>
+                <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.zhtw" onclick="langChange('zhtw')"></a>
+                <a class="nav-item nav-link hover-underline-animation" data-i18n="Lang.en" onclick="langChange('en')"></a>
               </div>
             </li>
             <a v-show="currentPN == 'whale' || currentPN == 'giant' " class="nav-item nav-link mx-2"
@@ -233,9 +231,9 @@
         <div data-i18n="Address.TwAddress"></div>
         <div data-i18n="Address.Phone"></div>
         <div class="pt-2">
-          <image class="mr-1" src="./images/icon/clock_icon.png" width="16px"></image>
-          <span class="pt-1" style="font-size: 1em;" data-i18n="ExhibitionInfo.WeeksOpen_1"><br>
-            <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
+          <!-- <image class="mr-1" src="./images/icon/clock_icon.png" width="16px"></image> -->
+          <!-- <span class="pt-1" style="font-size: 1em;" data-i18n="ExhibitionInfo.WeeksOpen_1"><br>
+            <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span> -->
 
           </span>
         </div>
@@ -251,7 +249,7 @@
     <!-- Contact us -->
     <div class="pt-3 pb-2 row " style="background-color: #1d1d1d;margin-right:0px">
       <div class="col-6" style="left:10%">
-        <h2 style="color: white;" data-i18n="AboutUs"></h2>
+        <h2 class="footer_h2" data-i18n="AboutUs"></h2>
         <div class="pt-2">
           <ul class="menu menu--icon-menu ">
             <li>
@@ -272,8 +270,8 @@
         <div style="font-weight: 500;" data-i18n="Address.Title"></div>
         <div data-i18n="Address.TwAddress"></div>
         <div data-i18n="Address.Phone"></div>
-        <div class="pt-2">
-          <img src="./images/qrcode.png" style="width: 65px; height: 65px;">
+        <div class="pt-4">
+          <!-- <img src="./images/qrcode.png" style="width: 65px; height: 65px;"> -->
         </div>
       </div>
 
@@ -281,13 +279,13 @@
         <div>
           <div>
             <div style="font-weight: bold;">
-              <image class=" mr-1" src="./images/icon/clock_icon.png" width="16px"></image>
-              <span data-i18n="ExhibitionInfo.OpeningTitle"></span>
+              <!-- <image class=" mr-1" src="./images/icon/clock_icon.png" width="16px"></image>
+              <span data-i18n="ExhibitionInfo.OpeningTitle"></span> -->
             </div>
             <div>
-              <span data-i18n="ExhibitionInfo.WeeksOpen_1"></span>
+              <!-- <span data-i18n="ExhibitionInfo.WeeksOpen_1"></span>
               <br>
-              <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span>
+              <span data-i18n="ExhibitionInfo.WeeksOpen_2"></span> -->
             </div>
 
           </div>
@@ -446,7 +444,7 @@
 
   // 重新加載網頁內容
   function reloadPage(e) {
-    if (lng == "jp" && e != "whale"){
+    if (lng == "jp" && e != "whale") {
       lng = "en"
     }
     $.get(`./${e}.html`, function (data, status) {
@@ -528,13 +526,13 @@
         window.history.replaceState(null, null, `?page=${e}`);
 
 
-        if (e == "whale"){
+        if (e == "whale") {
           $('.fixedBG_mobile').css('background-image', `url(./images/Background/${e}_bg_mobile.jpg`);
         }
-        else if (e == "BuNam"){
+        else if (e == "BuNam") {
           $('.fixedBG_mobile').css('background-image', `url(./images/Background/${e}_bg_mobile.png`);
         }
-        else if (e == "collection"){
+        else if (e == "collection") {
           $('.fixedBG_mobile').css('background-image', `url(./images/Background/${e}_bg_mobile.png`);
         }
       }

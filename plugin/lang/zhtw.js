@@ -200,8 +200,8 @@ let zhtw = {
     Collection_1: {
       Title: "巨人巨獸化石　　　　　　　　　　",
 
-      imgTitle_1: "巨人斯金納1號 Skinner No.1",
-      imgDescription_1_1: "2020 巨人斯金納1號 Skinner No.1",
+      imgTitle_1: "巨人斯金納1號",
+      imgDescription_1_1: "2020 巨人斯金納1號",
       imgDescription_1_2: "(342x156xH238 cm)",
 
       imgTitle_2: "巨獸-鯊鹿兒",
@@ -216,8 +216,8 @@ let zhtw = {
       imgDescription_4_1: "",
       imgDescription_4_2: "",
 
-      imgTitle_6: "鯨魚1號 (Whale Monster 01)",
-      imgDescription_6_1: "2021 遺跡化石 - 鯨魚1號 (Whale Monster 01)",
+      imgTitle_6: "鯨魚1號",
+      imgDescription_6_1: "2021 遺跡化石 - 鯨魚1號",
       imgDescription_6_2: "(1140x320x55 cm)(1824)	",
     },
     Collection_2: {
